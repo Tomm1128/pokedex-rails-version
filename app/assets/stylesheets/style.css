@@ -1,0 +1,164 @@
+body {
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+
+#header {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  align-items: center;
+  justify-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#pokedex {
+  display: grid;
+  background-image: url('/assets/pokedex.png');
+  background-repeat: no-repeat;
+  background-size: 300px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 500px;
+  width: 300px;
+  place-self: center;
+}
+
+#sprite {
+  place-self: center;
+  height: 200px;
+  width: 200px;
+  padding-bottom: 100px;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+#pokemon-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#search {
+  margin: 5px;
+}
+
+#pokedex-entry{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin: 10px;
+}
+
+#name-section {
+  background-color: white;
+  height: 75px;
+  width: 300px;
+  background-image: linear-gradient(to bottom, red 40%, rgba(0,0,0,0) 20%);
+  outline: solid;
+  outline-color: red;
+  justify-self: right;
+  border-radius: 25px;
+  margin: 10px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+h2 {
+  text-align: right;
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+#details-section {
+  height: 150px;
+  width: 400px;
+  outline: solid;
+  outline-color: black;
+  outline-width: medium;
+  justify-self: right;
+  border-radius: 15px;
+  margin: 10px;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+#types-section {
+  height: 100px;
+  width: 200px;
+  outline: solid;
+  outline-color: black;
+  outline-width: medium;
+  justify-self: right;
+  border-radius: 15px;
+  margin-right: 100px;
+  margin: 10px;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+#favorite-pokemon {
+  width: 100px;
+  height: 50px;
+  justify-self: right;
+  grid-row-start: 1;
+  grid-row-end:1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#pokemon-team {
+  grid-row-start: 2;
+  grid-row-end:2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  display:grid;
+}
+
+.team-slots{
+  display: inline-flex;
+  background-color: green;
+  border: solid;
+  border-color: greenyellow;
+  border-radius: 25px;
+  margin: 5px;
+  height: 75px;
+  width: 400px;
+  cursor: grab;
+}
+
+.remove-from-team{
+ align-self: flex-end;
+}
+
+.team-sprite {
+  height: 70px;
+  width: 70px;
+}
+
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#random-pokemon {
+  width: 100px;
+}
