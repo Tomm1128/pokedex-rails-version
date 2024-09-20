@@ -1,5 +1,5 @@
 body {
-  display:grid;
+  display: grid;
   grid-template-columns: auto auto auto;
 }
 
@@ -17,27 +17,23 @@ h1 {
   text-align: center;
 }
 
+#pokedex-container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 #pokedex {
   display: grid;
-  background-image: url('/assets/pokedex.png');
+  background-image: url(assets/pokedex.png);
   background-repeat: no-repeat;
   background-size: 300px;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
   height: 500px;
   width: 300px;
   place-self: center;
-}
-
-#sprite {
-  place-self: center;
-  height: 200px;
-  width: 200px;
-  padding-bottom: 100px;
-  padding-left: 25px;
-  cursor: pointer;
 }
 
 #pokemon-search {
@@ -51,7 +47,7 @@ h1 {
   margin: 5px;
 }
 
-#pokedex-entry{
+#pokedex-entry {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-row-start: 3;
@@ -59,6 +55,15 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 2;
   margin: 10px;
+}
+
+#sprite {
+  place-self: center;
+  height: 200px;
+  width: 200px;
+  padding-bottom: 100px;
+  padding-left: 25px;
+  cursor: pointer;
 }
 
 #name-section {
@@ -119,20 +124,20 @@ h2 {
   height: 50px;
   justify-self: right;
   grid-row-start: 1;
-  grid-row-end:1;
+  grid-row-end: 1;
   grid-column-start: 2;
   grid-column-end: 2;
 }
 
 #pokemon-team {
   grid-row-start: 2;
-  grid-row-end:2;
+  grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 1;
-  display:grid;
+  display: grid;
 }
 
-.team-slots{
+.team-slots {
   display: inline-flex;
   background-color: green;
   border: solid;
@@ -144,8 +149,8 @@ h2 {
   cursor: grab;
 }
 
-.remove-from-team{
- align-self: flex-end;
+.remove-from-team {
+  align-self: flex-end;
 }
 
 .team-sprite {
@@ -161,4 +166,10 @@ h3 {
 
 #random-pokemon {
   width: 100px;
+}
+
+#search-result {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
 }
