@@ -1,28 +1,35 @@
-<div id="header">
-    <h1>Pokédex</h1>
-    <form id="pokemon-search">
-      <label for="search">Pokédex Entry:</label>
-      <input type="text" id="search">
-      <input type="submit" value="Submit">
-    </form>
-    <button id="random-pokemon">Random Pokemon</button>
-  </div>
+<div id="header" data-controller="search">
+  <h1>Pokédex</h1>
+  <form id="pokemon-search" data-action="submit->search#search" data-search-target="form">
+    <label for="search">Pokédex Entry:</label>
+    <input type="text" id="search" data-search-target="input">
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
-  <div id="pokedex"></div>
-  <audio id="audio-player"></audio>
+<audio id="audio-player" data-controller="audio" data-audio-target="audioPlayer"></audio>
+
+<div id="pokedex-container" data-controller="pokedex">
+  <button id="random-pokemon" data-action="click->pokedex#getRandomPokemon">Random Pokémon</button>
+
+  <div id="pokedex" data-pokedex-target="pokedexSection"></div>
 
   <div id="pokedex-entry">
-  <div id="name-section"></div>
-  <div id="types-section"></div>
-  <div id="details-section"></div>
+    <div id="name-section" data-pokedex-target="nameSection"></div>
+    <div id="types-section" data-pokedex-target="typesSection"></div>
+    <div id="details-section" data-pokedex-target="detailsSection"></div>
+    <div id="pokedex-entry-button" data-pokedex-target="pokedexEntry"></div>
   </div>
+</div>
 
-  <h3>Pokemon Team</h3>
-  <div id="pokemon-team">
-    <div id="1" class="team-slots" draggable="true"></div>
-    <div id="2" class="team-slots" draggable="true"></div>
-    <div id="3" class="team-slots" draggable="true"></div>
-    <div id="4" class="team-slots" draggable="true"></div>
-    <div id="5" class="team-slots" draggable="true"></div>
-    <div id="6" class="team-slots" draggable="true"></div>
-  </div>
+<h3>Pokemon Team</h3>
+<div id="pokemon-team" data-controller="team" data-team-target="teamSection">
+  <div id="1" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+  <div id="2" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+  <div id="3" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+  <div id="4" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+  <div id="5" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+  <div id="6" class="team-slots" draggable="true" data-team-target="teamSlots"></div>
+</div>
+
+<div id="search-result" data-search-target="result"></div>
